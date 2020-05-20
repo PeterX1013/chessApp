@@ -1,7 +1,7 @@
 # This comment is so I can apply a stash
+
 Chess Piece
 Abstraction and Inheritance
-
 Parent Class Piece
 - Move
 - Rank
