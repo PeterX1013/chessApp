@@ -4,7 +4,7 @@ import pygame, sys
 class chessWindow:
     pygame.init()
 
-    def createwindow(self):
+    def createwindow():
         window = pygame.display.set_mode((800, 650))
         pygame.display.set_caption("chessApp")
         window.fill((128, 0, 0))
