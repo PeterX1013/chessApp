@@ -1,13 +1,17 @@
 import pygame, sys
+from scoreboard import chessScoreboard
 
-
+# creates window for chess
 class chessWindow:
     pygame.init()
 
+    # function for creating window and calling other functions (e.i. scoreboard) inside the window
+    # components are made in order, window must be first then scoreboard, etc.
     def createwindow():
-        window = pygame.display.set_mode((800, 650))
+        window = pygame.display.set_mode((600, 600))
         pygame.display.set_caption("chessApp")
         window.fill((128, 0, 0))
+        chessScoreboard.createscoreboard(window)
 
         play_game = True
 
@@ -18,5 +22,6 @@ class chessWindow:
                     play_game = False
             pygame.display.flip()
 
-    if __name__ == "__main__":
-        createwindow()
+# Currently what we are using as a 'main' function
+if __name__ == "__main__":
+    chessWindow.createwindow()
