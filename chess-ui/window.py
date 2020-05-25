@@ -21,7 +21,3 @@ class chessWindow:
                 if event.type == pygame.QUIT:
                     play_game = False
             pygame.display.flip()
-
-# Currently what we are using as a 'main' function
-if __name__ == "__main__":
-    chessWindow.createwindow()
