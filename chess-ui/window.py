@@ -11,7 +11,8 @@ class chessWindow:
         window = pygame.display.set_mode((600, 600))
         pygame.display.set_caption("chessApp")
         window.fill((128, 0, 0))
-        chessScoreboard.createscoreboard(window)
+        scoreboard_display = chessScoreboard('player1', 'player2')
+        scoreboard_display.createScoreboard(window)
 
         play_game = True
 
@@ -21,7 +22,3 @@ class chessWindow:
                 if event.type == pygame.QUIT:
                     play_game = False
             pygame.display.flip()
-
-# Currently what we are using as a 'main' function
-if __name__ == "__main__":
-    chessWindow.createwindow()
