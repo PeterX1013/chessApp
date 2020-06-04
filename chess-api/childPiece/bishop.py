@@ -34,7 +34,7 @@ class Bishop(Piece):
     # Private helper method that is used in move_loc only
     # Takes in (y,x) coordinates or (column,row), as well as the piece, a location list, and tiles dictionary
     # Returns new loc_list, checks and adds locations to location list
-    def __add_diag_right(self, x_right, y_up, piece, tiles, loc_list):
+    def __add_diag_right(self, y_up, x_right, piece, tiles, loc_list):
         while x_right == range(0, 8) or y_up == range(0, 8):  # in range method, 0 is inclusive and 1 is exclusive
             tile = tiles.get((y_up, x_right))
             if tile:
@@ -48,7 +48,7 @@ class Bishop(Piece):
         return loc_list
 
     # Diagonal positive left: Y + 1, X + 1
-    def __add_diag_left(self, x_left, y_up, piece, tiles, loc_list):
+    def __add_diag_left(self, y_up, x_left, piece, tiles, loc_list):
         while x_left == range(0, 8) or y_up == range(0, 8):  # in range method, 0 is inclusive and 1 is exclusive
             tile = tiles.get((y_up, x_left))
             if tile:
@@ -62,7 +62,7 @@ class Bishop(Piece):
         return loc_list
 
     # Diagonal negative right: Y - 1, X - 1
-    def __add_negDiag_right(self, x_right, y_down, piece, tiles, loc_list):
+    def __add_negDiag_right(self, y_down, x_right, piece, tiles, loc_list):
         while x_right == range(0, 8) or y_down == range(0, 8):  # in range method, 0 is inclusive and 1 is exclusive
             tile = tiles.get((y_down, x_right))
             if tile:
@@ -76,7 +76,7 @@ class Bishop(Piece):
         return loc_list
 
     # Diagonal negative left: Y - 1, X + 1
-    def __add_negDiag_left(self, x_left, y_down, piece, tiles, loc_list):
+    def __add_negDiag_left(self, y_down, x_left, piece, tiles, loc_list):
         while x_left == range(0, 8) or y_down == range(0, 8):  # in range method, 0 is inclusive and 1 is exclusive
             tile = tiles.get((y_down, x_left))
             if tile:

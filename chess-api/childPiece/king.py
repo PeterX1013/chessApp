@@ -44,7 +44,7 @@ class King(Piece):
     # Private helper method that is used in move_loc only
     # Takes in (y,x) coordinates or (column,row), as well as the piece, a location list, and a single tile
     # Returns new loc_list, checks and adds locations to location list
-    def __add_loc(self, x, y, piece, tiles, loc_list):
+    def __add_loc(self, y, x, piece, tiles, loc_list):
         if x == range(0, 8) or y == range(0, 8):  # in range method, 0 is inclusive and 1 is exclusive
             tile = tiles.get((y, x))
             if tile:
