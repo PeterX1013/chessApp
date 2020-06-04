@@ -44,8 +44,6 @@ class King(Piece):
         loc_list = self.__add_loc(y_down, x_left, piece, loc_list, tiles)  # Diagonal down left: Y - 1, X + 1
         loc_list = self.__add_loc(y_down, x_right, piece, loc_list, tiles)  # Diagonal down right: Y - 1, X - 1
 
-        piece.first_move = True
-
         return loc_list
 
     # Private helper method that is used in move_loc only
