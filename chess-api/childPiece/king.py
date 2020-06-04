@@ -18,26 +18,26 @@ class King(Piece):
         loc_list = []
 
         # vertical up
-        y_V_up = location[0] + 1
+        y_up = location[0] + 1
         x = location[1]
 
-        loc_list = self.__add_loc(y_V_up, x, piece, loc_list, tiles)
+        loc_list = self.__add_loc(y_up, x, piece, loc_list, tiles)
 
         # vertical down
-        y_V_down = location[0] - 1
+        y_down = location[0] - 1
 
-        loc_list = self.__add_loc(y_V_down, x, piece, loc_list, tiles)
+        loc_list = self.__add_loc(y_down, x, piece, loc_list, tiles)
 
         # horizontal left
         y = location[0]
-        x_H_left = location[1] + 1
+        x_left = location[1] + 1
 
-        loc_list = self.__add_loc(y, x_H_left, piece, loc_list, tiles)
+        loc_list = self.__add_loc(y, x_left, piece, loc_list, tiles)
 
         # horizontal right
-        x_H_right = location[1] - 1
+        x_right = location[1] - 1
 
-        loc_list = self.__add_loc(y, x_H_right, piece, loc_list, tiles)
+        loc_list = self.__add_loc(y, x_right, piece, loc_list, tiles)
 
         return loc_list
 
