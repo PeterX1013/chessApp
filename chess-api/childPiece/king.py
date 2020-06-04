@@ -39,6 +39,11 @@ class King(Piece):
 
         loc_list = self.__add_loc(y, x_right, piece, loc_list, tiles)
 
+        loc_list = self.__add_loc(y_up, x_left, piece, loc_list, tiles)  # Diagonal up left: Y + 1, X + 1
+        loc_list = self.__add_loc(y_up, x_right, piece, loc_list, tiles)  # Diagonal up right: Y + 1, X - 1
+        loc_list = self.__add_loc(y_down, x_left, piece, loc_list, tiles)  # Diagonal down left: Y - 1, X + 1
+        loc_list = self.__add_loc(y_down, x_right, piece, loc_list, tiles)  # Diagonal down right: Y - 1, X - 1
+
         return loc_list
 
     # Private helper method that is used in move_loc only
