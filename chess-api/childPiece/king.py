@@ -1,5 +1,4 @@
-from ..parentPiece.piece import Piece
-
+import childPiece
 
 # This is the child class king, that inherits from the parent class piece
 # King uses the methods provided in piece, and writes the abstract method move_loc
